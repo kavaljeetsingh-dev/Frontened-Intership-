@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weight Converter</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #7991fc, #96e6a1);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+    }
+
+    .converter-box {
+      background-color: #eef9f2;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      text-align: center;
+    }
+
+    h2 {
+      color: teal;
+      margin-bottom: 20px;
+    }
+
+    input[type="number"] {
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      width: 200px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 18px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="converter-box">
+    <h2>Weight Converter</h2>
+    <label>Pounds: </label>
+    <input type="number" id="poundsInput" placeholder="Enter number">
+    <p id="result">Your weight in kg is: </p>
+  </div>
+
+  <script>
+    const input = document.getElementById('poundsInput');
+    const result = document.getElementById('result');
+
+    input.addEventListener('input', () => {
+      const pounds = parseFloat(input.value);
+      if (!isNaN(pounds)) {
+        const kilograms = (pounds * 0.453592).toFixed(2);
+        result.textContent = `Your weight in kg is: ${kilograms}`;
+        
+        // Clear after 10 seconds
+        setTimeout(() => {
+          input.value = '';
+          result.textContent = 'Your weight in kg is: ';
+        }, 10000);
+      } else {
+        result.textContent = 'Your weight in kg is: ';
+      }
+    });
+  </script>
+</body>
+</html>
