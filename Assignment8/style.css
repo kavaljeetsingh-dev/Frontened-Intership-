@@ -1,0 +1,62 @@
+/* Preloader */
+#preloader {
+  background: #000;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: 1000;
+}
+
+/* Hide preloader after load */
+body.loaded #preloader {
+  display: none;
+}
+
+/* Container */
+.video-container {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Video Style */
+video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Title - moved higher */
+.title {
+  position: absolute;
+  top: 20%; /* was 30% */
+  width: 100%;
+  text-align: center;
+  font-size: 4rem;
+  color: white;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+/* Control Button */
+.control-btn {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  border: none;
+  color: white;
+  padding: 16px;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+}
+
+.control-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
