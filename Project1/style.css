@@ -1,0 +1,65 @@
+/* Background with farm, purple flowers, birds, and sunset vibes */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.clock-container {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 40px;
+  border-radius: 20px;
+  backdrop-filter: blur(4px);
+}
+
+h1 {
+  margin-bottom: 40px;
+  letter-spacing: 3px;
+  font-size: 2.5rem;
+}
+
+.clock {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.time-box {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 30px 20px;
+  border-radius: 15px;
+  min-width: 100px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.time-box:hover {
+  transform: scale(1.05);
+}
+
+.time-box span {
+  display: block;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.time-box label {
+  margin-top: 10px;
+  display: block;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+.ampm-box {
+  background-color: rgba(0, 128, 0, 0.7);
+  color: white;
+}
